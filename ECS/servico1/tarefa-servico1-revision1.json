@@ -1,0 +1,54 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:sa-east-1:204367787518:task-definition/tarefa-servico1:1",
+    "containerDefinitions": [
+        {
+            "name": "tarefa1",
+            "image": "204367787518.dkr.ecr.sa-east-1.amazonaws.com/servico1:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "tarefa1-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "tarefa-servico1",
+    "executionRoleArn": "arn:aws:iam::204367787518:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "512",
+    "memory": "512",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-02-18T21:32:35.895Z",
+    "registeredBy": "arn:aws:iam::204367787518:user/leandro-Administrador",
+    "tags": []
+}
